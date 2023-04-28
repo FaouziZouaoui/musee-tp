@@ -3,8 +3,8 @@ import React , {useState} from 'react'
 
 const Connexion = ({navigation}) => {
  
-    const [login , setLogin] = useState("e@hotmail.com")
-    const [password , setPassword] = useState("123456")
+    const [login , setLogin] = useState("")
+    const [password , setPassword] = useState("")
   return (
     <View>
       <TextInput placeholder='login' style={styles.input} value={login} onChangeText={(text) => setLogin(text)}/>

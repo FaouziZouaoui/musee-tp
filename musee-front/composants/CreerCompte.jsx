@@ -15,7 +15,7 @@ const CreerCompte = ({navigation , route}) => {
         headers : {"content-type" : "application/json"}
       })
       .then(reponse=>reponse.json())
-      .then(data => console.log(data))
+      .then(data => navigation.goBack())
     } 
   return (
     <View>

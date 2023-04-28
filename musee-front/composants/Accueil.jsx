@@ -15,19 +15,17 @@ const Accueil = () => {
 
   return (
     <View style={styles.box}>
-        <View style={styles.resultat}>
             { 
                 <FlatList 
                     data={resultats}
                     renderItem={ ({item}) => <View style={styles.espace}>
-                        <Image source={{ uri : item.image , width: 240, height : 200 }}/>
+                        <Image source={{ uri : item.image , width: 350, height : 200 }}/>
                         <Text style={styles.titre}>{ item.nom }</Text>
                         <Text>{ item.description } </Text>
                     </View>}
                     keyExtractor={item => item._id}
                 />
             }
-        </View>
     </View>
   )
 }
@@ -37,9 +35,11 @@ const styles = StyleSheet.create({
     box : {
         flex: 1,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        paddingBottom: 20
+        
     },
     titre : {
-        fontSize : 40,
+        fontSize : 30,
     }
 })
