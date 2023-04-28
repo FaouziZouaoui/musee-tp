@@ -3,12 +3,12 @@ import React , {useState} from 'react'
 
 const Connexion = ({navigation}) => {
  
-    const [login , setLogin] = useState("")
+    const [login , setLogin] = useState("e@hotmail.com")
+    const [password , setPassword] = useState("123456")
   return (
     <View>
-      <Text>Connexion</Text>
       <TextInput placeholder='login' style={styles.input} value={login} onChangeText={(text) => setLogin(text)}/>
-      <TextInput placeholder='password' style={styles.input}/>
+      <TextInput secureTextEntry={true} placeholder='password' style={styles.input} value={password} onChangeText={(text) => setPassword(text)}/>
       <Button onPress={() => {}} title="connexion"  style={styles.bouton} color="blue"/>
       <Button  style={styles.bouton} onPress={() => navigation.navigate("creer-compte" , {query : login})} title="créer un compte" />
     </View>

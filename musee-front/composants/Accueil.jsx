@@ -10,7 +10,7 @@ const Accueil = () => {
     useEffect(function(){
         fetch("http://10.0.2.2:4000/all")
         .then(reponse => reponse.json())
-        .then(data => setResultats(data)); 
+        .then(data => {setResultats(data);}); 
     } , [])
 
   return (
@@ -20,11 +20,11 @@ const Accueil = () => {
                 <FlatList 
                     data={resultats}
                     renderItem={ ({item}) => <View style={styles.espace}>
-                        <Image source={{ uri : item.image , width: "100%", height : 200 }}/>
+                        <Image source={{ uri : item.image , width: 240, height : 200 }}/>
                         <Text style={styles.titre}>{ item.nom }</Text>
                         <Text>{ item.description } </Text>
                     </View>}
-                    keyExtractor={item => item.idDrink}
+                    keyExtractor={item => item._id}
                 />
             }
         </View>

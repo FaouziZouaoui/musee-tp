@@ -30,14 +30,14 @@ export default function App() {
       }}>
         <Menu.Screen name="ACCUEIL" component={Accueil} 
           options={{
-            tabBarIcon : ()=>{
+            tabBarIcon : function(){
               return <MaterialCommunityIcons name="home" color="black" size={40} />
             }
           }} />
 
 
             <Menu.Screen name="connexion-menu" component={ ConnexionNavigation } options={{
-              tabBarIcon : ()=>{
+              tabBarIcon : function(){
                 return <MaterialCommunityIcons name="account" color="black" size={40} />
               },
               title : `Bienvenu ${profil.nom}`
